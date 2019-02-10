@@ -17,16 +17,12 @@ class MyApp extends StatefulWidget {
 class StarWarsState extends State<MyApp> {
   final String url = "https://flutter-yqiunhicgz.now.sh"; //Change API address wait for the magic
   List data;
-
   Future<String> getSWData() async {
-    var res =
-        await http.get(Uri.parse(url), headers: {"Accept": "application/json"});
-
+    var res = await http.get(Uri.parse(url), headers: {"Accept": "application/json"});
     setState(() {
       var resBody = json.decode(res.body);
       data = resBody["data"];
     });
-
     return "Success!";
   }
 
