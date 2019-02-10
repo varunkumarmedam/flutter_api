@@ -15,7 +15,7 @@ class MyApp extends StatefulWidget {
 }
 
 class StarWarsState extends State<MyApp> {
-  final String url = "https://flutter-yqiunhicgz.now.sh";
+  final String url = "https://flutter-yqiunhicgz.now.sh"; //Change API address wait for the magic
   List data;
 
   Future<String> getSWData() async {
